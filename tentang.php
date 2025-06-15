@@ -53,15 +53,15 @@
   <div class="container">
     <img src="uploads/bnga.jpg" alt="Foto Bunga" class="about-img">
     
-    <h2 class="about-name">Bunga Alya Mukhbita</h2>
+    <h2 class="about-name">Najmi Khairurizqa</h2>
 
     <p class="about-desc">
-      Halo! Saya adalah penulis dan pengelola <strong>BungaBuzz</strong>, portal berita yang menghadirkan informasi terkini, edukatif, dan menginspirasi dari berbagai sudut kehidupan. Tujuan saya adalah menjadikan berita bukan hanya informasi, tapi juga sumber semangat untuk pembaca.
+      Halo! Saya adalah penulis dan pengelola <strong>NamiNews</strong>, portal berita yang menghadirkan informasi terkini, edukatif, dan menginspirasi dari berbagai sudut kehidupan. Tujuan saya adalah menjadikan berita bukan hanya informasi, tapi juga sumber semangat untuk pembaca.
     </p>
 
     <div class="social-icons">
-      <a href="https://www.instagram.com/bngalya_/" class="text-danger" target="_blank"><i class="bi bi-instagram"></i></a>
-      <a href="https://github.com/Buwnbun17" class="text-dark" target="_blank"><i class="bi bi-github"></i></a>
+      <a href="https://www.instagram.com/najmii.khq/" class="text-danger" target="_blank"><i class="bi bi-instagram"></i></a>
+      <a href="https://github.com/myiami356" class="text-dark" target="_blank"><i class="bi bi-github"></i></a>
     </div>
   </div>
 </section>
