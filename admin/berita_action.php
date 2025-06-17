@@ -12,20 +12,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $tanggal = $_POST['tanggal'];
   $slug = slugify($judul);
 
-  $tagar = trim($_POST['tag']); // Ambil tagar dari form
+  // 💡 Bersihkan tag dari spasi ekstra
+  $input_tagar = explode(',', $_POST['tag']);
+  $tag_bersih = [];
 
-if (move_uploaded_file($tmp, $target)) {
-  $stmt = $conn->prepare("INSERT INTO berita (judul, isi, id_kategori, tanggal, gambar, slug, tag) VALUES (?, ?, ?, ?, ?, ?, ?)");
-  $stmt->bind_param("ssissss", $judul, $isi, $id_kategori, $tanggal, $gambar, $slug, $tagar);
-
-  if ($stmt->execute()) {
-    header("Location: dashboard.php");
-    exit;
-  } else {
-    echo "Gagal menyimpan ke database: " . $stmt->error;
+  foreach ($input_tagar as $t) {
+    $tag_bersih[] = trim($t);
   }
-}
 
+  $tagar = implode(',', $tag_bersih); // contoh: politik,ekonomi,sosial
 
   if (isset($_FILES['gambar']) && $_FILES['gambar']['error'] === 0) {
     $gambar = basename($_FILES['gambar']['name']);
@@ -33,8 +28,8 @@ if (move_uploaded_file($tmp, $target)) {
     $target = "../uploads/" . $gambar;
 
     if (move_uploaded_file($tmp, $target)) {
-      $stmt = $conn->prepare("INSERT INTO berita (judul, isi, id_kategori, tanggal, gambar, slug) VALUES (?, ?, ?, ?, ?, ?)");
-      $stmt->bind_param("ssisss", $judul, $isi, $id_kategori, $tanggal, $gambar, $slug);
+      $stmt = $conn->prepare("INSERT INTO berita (judul, isi, id_kategori, tanggal, gambar, slug, tag) VALUES (?, ?, ?, ?, ?, ?, ?)");
+      $stmt->bind_param("ssissss", $judul, $isi, $id_kategori, $tanggal, $gambar, $slug, $tagar);
 
       if ($stmt->execute()) {
         header("Location: dashboard.php");

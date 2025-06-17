@@ -46,7 +46,8 @@
 }
 
 .pagination .page-link {
-  color:rgb(247, 238, 111);
+  color:rgb(172, 164, 59);
+  border-color: #B7950B;
 }
 .pagination .page-link:hover {
   background-color:rgb(0, 0, 0);
@@ -60,6 +61,9 @@
 .bg-secondary {
   background-color:rgb(247, 238, 111) !important; /* kuning pastel muda */
   color: #333 !important; /* teks biar tetap kebaca */
+}
+.card {
+  margin-bottom: 20px;
 }
 </style>
 
@@ -83,7 +87,7 @@
     <!-- Berita -->
     <div class="col-md-6">
       <?php
-      $batas = 5;
+      $batas = 7;
       $hal = isset($_GET['hal']) ? $_GET['hal'] : 1;
       $mulai = ($hal - 1) * $batas;
 

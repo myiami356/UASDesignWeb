@@ -10,6 +10,7 @@
 
   <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
   <style>
         .nav-link {
@@ -93,7 +94,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
     <div class="container">
-      <img src="uploads/nami.png" alt="NamiNews Logo" height="60">
+      <img src="/uasdesignweb/uploads/nami.png" alt="NamiNews Logo" height="60">
       <a class="navbar-brand navbar-brand-custom" href="index.php">NamiNews</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
@@ -102,12 +103,12 @@
       <div class="collapse navbar-collapse" id="navbarContent">
   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
     <li class="nav-item">
-      <a class="nav-link active d-flex align-items-center gap-1" href="index.php">
+      <a class="nav-link active d-flex align-items-center gap-1" href="/uasdesignweb/index.php">
         <i class="bi bi-house-door-fill"></i> Home
       </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link d-flex align-items-center gap-1" href="tentang.php">
+      <a class="nav-link d-flex align-items-center gap-1" href="/uasdesignweb/tentang.php">
         <i class="bi bi-info-circle-fill"></i> Tentang
       </a>
     </li>

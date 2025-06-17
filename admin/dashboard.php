@@ -2,14 +2,6 @@
 <?php $currentPage = basename($_SERVER['PHP_SELF']); ?>
 
 <style>
-  :root {
-    --blue-primary: #1E88E5;
-    --blue-dark: #1565C0;
-    --blue-light: #E3F2FD;
-    --text-dark: #343a40;
-    --text-on-blue: #ffffff;
-  }
-
   body {
     background-color: #f8f9fa;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -24,7 +16,7 @@
 
   .sidebar {
     width: 240px;
-    background-color: var(--blue-primary);
+    background-color:rgb(247, 238, 111); /* kuning pastel utama */
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
@@ -34,18 +26,26 @@
     padding: 20px;
     font-size: 1.25rem;
     font-weight: 600;
-    color: var(--text-on-blue);
-    border-bottom: 1px solid var(--blue-dark);
+    color: #000;
+    border-bottom: 1px solid #d3b80f;
     text-align: center;
-  }
-
+    line-height: 1.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px; /* Tambahkan margin atas untuk menghindari tumpang tindih dengan navbar */
+}
+.sidebar-header i {
+  margin-right: 8px;
+  font-size: 1.25rem;
+}
   .sidebar-nav {
     flex-grow: 1;
     margin-top: 20px;
   }
 
   .sidebar-nav a {
-    color: var(--text-on-blue);
+    color: #000000;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -56,13 +56,13 @@
   }
 
   .sidebar-nav a:hover {
-    background-color: var(--blue-dark);
+    background-color:rgb(255, 210, 74); /* kuning lebih gelap */
     padding-left: 30px;
   }
 
   .sidebar-nav a.active {
-    background-color: var(--blue-light);
-    color: var(--blue-dark);
+    background-color:rgb(255, 204, 0); /* kuning paling terang */
+    color: #000000;
     font-weight: 600;
   }
 
@@ -70,26 +70,71 @@
     width: 1.25em;
   }
 
-  .main-content {
-    flex-grow: 1;
-    padding: 2rem;
-  }
+/* Main Content Wrapper */
+.main-content {
+  flex-grow: 1;
+  padding: 2rem;
+  margin-top: 80px; /* Hindari ketutup navbar */
+  background-color: #fdfdfd;
+  min-height: 100vh;
+}
 
-  .content-header {
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 1rem;
-    margin-bottom: 2rem;
-  }
+/* Header di atas card */
+.content-header {
+  border-bottom: 2px solid #f2c94c;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  max-width: 1000px;    /* Lebar maksimal kotaknya */
+  width: 100%;    
+}
 
-  .content-header h4 {
-    color: var(--text-dark);
-    font-weight: 600;
-  }
+.content-header h4 {
+  color: #333;
+  font-weight: bold;
+}
 
-  .card-header-blue {
-    background-color: var(--blue-primary);
-    color: var(--text-on-blue);
-  }
+/* Card Style */
+.card {
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  max-width: 1000px;    /* Lebar maksimal kotaknya */
+  width: 100%;         /* Supaya fleksibel di layar kecil */
+}
+
+/* Card Header dengan warna kuning muda */
+.card-header-blue {
+  background-color: #fbe17d;
+  color: #000;
+  font-weight: bold;
+  border-bottom: 1px solid #e0c94c;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Card Body */
+.card-body {
+  background-color: #fffef8;
+  padding: 1.5rem;
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.card-body strong {
+  color:rgb(0, 0, 0);
+}
+
+.card-body em {
+  color: #666;
+  font-style: italic;
+  color:rgb(0, 0, 0);
+}
+
+.card-text {
+  color:rgb(0, 0, 0);
+}
+
 </style>
 
 <div class="wrapper">
@@ -109,7 +154,7 @@
       </a>
     </nav>
   </div>
-
+  
   <div class="main-content">
     <div class="content-header">
       <h4>Dashboard</h4>
@@ -120,8 +165,9 @@
         <h5 class="mb-0">Selamat Datang!</h5>
       </div>
       <div class="card-body">
-        <p class="card-text">Halo Admin, selamat datang di Portal BungaBuzz.</p>
-        <p class="card-text">Dari sini Anda dapat mengelola kategori dan konten berita yang akan ditampilkan di halaman depan website. Gunakan menu di sebelah kiri untuk memulai.</p>
+        <p class="card-text">Halo Admin, selamat datang di Portal <strong>NamiNews</strong>.</p>
+        <p class="card-text">Melalui halaman ini, Anda dapat mengelola <strong>kategori</strong> dan <strong>konten berita</strong> yang akan ditampilkan di website utama. Gunakan menu di sisi kiri untuk mulai mengelola konten Anda.</p>
+        <p class="card-text"><em>Pastikan setiap berita memiliki kategori dan tagar yang relevan.</em></p>
       </div>
     </div>
   </div>

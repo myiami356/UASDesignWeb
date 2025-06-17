@@ -1,4 +1,11 @@
 <?php include 'inc/header.php'; include 'db/config.php'; ?>
+
+<style>
+  .card-body a {
+    color: rgb(167, 133, 0);
+  }
+</style>
+
 <div class="container mt-4">
 <h5>Hasil pencarian untuk "<?= $_GET['q'] ?>"</h5>
 <?php

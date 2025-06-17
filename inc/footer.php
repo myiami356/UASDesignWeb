@@ -6,6 +6,7 @@
       padding: 30px 0 15px;
       font-size: 14px;
       border-top: 3px solid rgba(255, 255, 255, 0.2);
+      z-index: 1;
     }
 
     footer h5 {
@@ -64,22 +65,25 @@
         <h5>NamiNews</h5>
         <p>NamiNews adalah portal berita terpercaya yang menyajikan informasi terkini seputar peristiwa nasional, teknologi, hiburan, dan gaya hidup.</p>
         <div>
-          <a href="index.php" class="footer-icon-link"><i class="bi bi-house-door-fill"></i> Home</a>
-          <a href="tentang.php" class="footer-icon-link"><i class="bi bi-info-circle-fill"></i> Tentang</a>
-          <a href="index.php" class="footer-icon-link"><i class="bi bi-journal-text"></i> Artikel</a>
+          <a href="/uasdesignweb/index.php" class="footer-icon-link"><i class="bi bi-house-door-fill"></i> Home</a>
+          <a href="/uasdesignweb/tentang.php" class="footer-icon-link"><i class="bi bi-info-circle-fill"></i> Tentang</a>
+          <a href="/uasdesignweb/artikel.php" class="footer-icon-link"><i class="bi bi-journal-text"></i> Artikel</a>
         </div>
       </div>
 
       <!-- Kolom Tengah: Kategori -->
       <div class="col-md-4 mb-3">
-        <h5>Kategori</h5>
-        <ul>
-          <li><a href="#">Nasional</a></li>
-          <li><a href="#">Teknologi</a></li>
-          <li><a href="#">Hiburan</a></li>
-          <li><a href="#">Gaya Hidup</a></li>
-        </ul>
-      </div>
+  <h5>Kategori</h5>
+  <ul>
+    <li><a href="kategori.php?id=12">Nasional</a></li>
+    <li><a href="kategori.php?id=13">Internasional</a></li>
+    <li><a href="kategori.php?id=14">Ekonomi</a></li>
+    <li><a href="kategori.php?id=15">Teknologi</a></li>
+    <li><a href="kategori.php?id=13">Hiburan</a></li>
+    <li><a href="kategori.php?id=14">Gaya Hidup</a></li>
+    <li><a href="kategori.php?id=15">Olahraga</a></li>
+  </ul>
+</div>
 
       <!-- Kolom Kanan: Kontak + Sosial -->
       <div class="col-md-4 mb-3">

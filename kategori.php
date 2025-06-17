@@ -2,18 +2,18 @@
 
 <style>
 .btn-blue {
-  background-color: #1E88E5; 
-  border-color: #1E88E5;
-  color: white;
+  background-color:rgb(247, 238, 111);
+  border-color: #B7950B;
+  color: black;
 }
 .btn-blue:hover {
-  background-color: #1565C0; 
-  border-color: #1565C0;
-  color: white;
+  background-color:rgb(201, 190, 47);
+  border-color: #B7950B;
+  color: black;
 }
 
 .text-blue-theme {
-    color: #1E88E5; /* Warna link biru */
+    color:rgb(167, 133, 0); 
 }
 .card-img-cover {
   object-fit: cover;
